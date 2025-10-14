@@ -1,28 +1,32 @@
 [
    {
-      "image": "dice1",
+      "image": "dice1.png",
       "name": "dice1",
+      "price": 9.99,
       "description": "bluh"
    },
    {
-      "image": "dice2",
+      "image": "dice2.png",
       "name": "dice2",
+      "price": 9.99,
       "description": "bluh"
    },
    {
-      "image": "dice3",
+      "image": "dice3.png",
       "name": "dice3",
+      "price": 9.99,
       "description": "bluh"
    },
    {
-      "image": "dice4",
+      "image": "dice4.png",
       "name": "dice4",
+      "price": 9.99,
       "description": "bluh"
    },
    {
-      "image": "dice5",
+      "image": "dice5.png",
       "name": "dice5",
-      "price": "9.99",
+      "price": 9.99,
       "description": "bluh"
    }
 ]
