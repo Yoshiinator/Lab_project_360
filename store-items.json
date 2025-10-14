@@ -1,0 +1,28 @@
+[
+   {
+      "image": "dice1",
+      "name": "dice1",
+      "description": "bluh"
+   },
+   {
+      "image": "dice2",
+      "name": "dice2",
+      "description": "bluh"
+   },
+   {
+      "image": "dice3",
+      "name": "dice3",
+      "description": "bluh"
+   },
+   {
+      "image": "dice4",
+      "name": "dice4",
+      "description": "bluh"
+   },
+   {
+      "image": "dice5",
+      "name": "dice5",
+      "price": "9.99",
+      "description": "bluh"
+   }
+]
