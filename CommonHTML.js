@@ -8,6 +8,8 @@ function SetElementHTML(elementId, htmlFileName)
       .then(html =>
       {
          document.getElementById(elementId).innerHTML = html;
+         
+         document.dispatchEvent(new Event("headerLoaded"));
       });
 }
 
