@@ -7,52 +7,8 @@
    </head>
 
    <body>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container-fluid">
-            <a class="navbar-brand">DiceItUp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav ms-auto">
-                  <ul class="navbar-nav">
-                     <li class="nav-item"><a class="nav-link active" href="Home.html">Home</a></li>
-                     <li class="nav-item"><a class="nav-link" href="Contact-Info.html">Contact</a></li>
-                     <li class="nav-item"><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-                  </ul>
-               </ul>
-            </div>
-         </div>
-      </nav>
-
-      <!-- Login Modal -->
-      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body">
-                  <form>
-                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                     </div>
-                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password">
-                     </div>
-                     <button type="link" class="btn btn-primary w-100" href="signUp.html">Signup</button>
-                     <button type="submit" class="btn btn-primary w-100">Login</button>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
+      <!-- Header -->
+      <div id="header"></div>
 
       <!-- Main Body -->
       <div class="main-container ">
@@ -135,17 +91,9 @@
       </div>
 
       <!-- Footer -->
-      <footer class="bg-dark text-light py-3">
-         <div class="container-fluid text-center">
-            <ul class="list-inline mb-0">
-               <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Terms & Conditions</a></li>
-               <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
-               <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Cookie Policy</a></li>
-            </ul>
-            <p class="mt-2 mb-0">&copy; 2025 Yoshi Wiener</p>
-         </div>
-      </footer>
+      <div id="footer"></div>
 
+      <script src="CommonHTML.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
    </body>
 </html>
