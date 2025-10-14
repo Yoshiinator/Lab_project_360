@@ -11,6 +11,14 @@
       <div id="header"></div>
 
       <!-- Main Body -->
+      <!-- Searchbar -->
+      <form>
+         <div class="input-group mb-3">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <input type="text" class="form-control" aria-label="Search" aria-describedby="inputGroup-sizing-default">
+         </div>
+      </form>
+
       <!-- store.html -->
       <div class="container mt-4">
       <div id="storeGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"></div>
@@ -23,7 +31,17 @@
                   <p class="card-text"></p>
                </div>
                <div class="card-footer">
-                  <small class="text-muted price"></small>
+                  <div class="row text-center">
+                     <div class="col-md-4 text-dark">
+                        <small class="text-muted price"></small>
+                     </div>
+                     <div class="col-md-4 text-dark">
+                        <small class="text-muted quantity"></small>
+                     </div>
+                     <div class="col-md-4">
+                        <button type="button" class="btn btn-success AddToCart">Add to Cart</button>
+                     </div>
+                  </div>
                </div>
                </div>
             </div>

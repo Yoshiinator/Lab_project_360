@@ -14,6 +14,7 @@ fetch('store-items.json')
             clone.querySelector('.card-title').textContent = item.name;
             clone.querySelector('.card-text').textContent = item.description;
             clone.querySelector('.price').textContent = `$${item.price.toFixed(2)}`;
+            clone.querySelector('.quantity').textContent = item.quantity;
             grid.appendChild(clone);
         });
     });
