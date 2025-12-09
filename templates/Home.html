@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>DiceItUp</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   </head>
+
+   <body>
+      <!-- Header -->
+      {% include 'Header.html' %}
+
+      <!-- Flash Messages -->
+      <div class="container mt-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+      </div>
+
+      <!-- Main Body -->
+      <!-- store.html -->
+      <div class="container mt-4">
+          <div id="storeGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            {% for item in items %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                <img class="card-img-top" src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row text-center">
+                        <div class="col-md-4 text-dark">
+                            <small class="text-muted price">{{ item.price }}</small>
+                        </div>
+                        <div class="col-md-4 text-dark">
+                            <small class="text-muted quantity">{{ item.quantity }}</small>
+                        </div>
+                        <div class="col-md-4">
+                            <form action="{{ url_for('addtocart', item_id=item.item_id) }}" method="POST">
+                                <button type="submit" class="btn btn-success">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+
+      <!-- Footer -->
+      {% include 'Footer.html' %}
+
+      <script src="HighlightCurrentTab.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
